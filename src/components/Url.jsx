@@ -149,14 +149,14 @@ export const Url = () => {
             </SpSpan>
             <SpParagraph>
               Before:
-              <SpLink href="https://www.youtube.com/watch?v=_lleMDkiB9w&list=PLXJSt32YUa4VH5bEPhu5SM2I_VudO6Zgz">
-                https://www.youtube.com/watch?v=_lleMDkiB9w&list=PLXJSt32YUa4VH5bEPhu5SM2I_VudO6Zgz
+              <SpLink href="https://www.instagram.com/stories/new_javascript/3048713000890204421/">
+                https://www.instagram.com/stories/new_javascript/3048713000890204421/
               </SpLink>
             </SpParagraph>
             <SpParagraph>
               After:{" "}
-              <SpLinkW href="https://bit.ly/3Y7f5Rh">
-                https://bit.ly/3Y7f5Rh
+              <SpLinkW href="https://bit.ly/3KMf6Hh">
+                https://bit.ly/3KMf6Hh
               </SpLinkW>
             </SpParagraph>
           </SpDiv>
