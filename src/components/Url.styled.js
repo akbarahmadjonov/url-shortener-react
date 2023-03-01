@@ -33,6 +33,22 @@ export const HeaderList = styled.ul`
 
 export const HeaderItem = styled.li`
   list-style: none;
+
+  @media (max-width: 320px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 578px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 20px;
+  }
 `;
 
 export const HeaderLink = styled.a`
@@ -55,19 +71,81 @@ export const Wrapper = styled.div`
 
   /* Margin, paddings */
   margin-top: 180px;
+
+  @media (max-width: 320px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
 `;
 
 export const WrapperImg = styled.div`
   height: 100%;
 `;
 
-export const Img = styled.img``;
+export const Img = styled.img`
+  @media (max-width: 320px) {
+    width: 100%;
+  }
 
-export const URLWrapper = styled.div``;
+  @media (max-width: 578px) {
+    width: 100%;
+  }
+
+  @media (max-width: 720px) {
+    width: 100%;
+  }
+
+  @media (max-width: 992px) {
+    width: 100%;
+  }
+`;
+
+export const URLWrapper = styled.div`
+  @media (max-width: 320px) {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 578px) {
+    width: 300px;
+    margin: 0 auto;
+  }
+`;
 
 export const HeadTitle = styled.h1`
   margin-left: 50px;
   text-align: center;
+
+  @media (max-width: 320px) {
+    font-size: 40px;
+    margin-left: 0;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 45px;
+    margin-left: 0;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 50px;
+    margin-left: 0;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 45px;
+    margin-left: 0;
+  }
 `;
 
 export const URLParent = styled.div`
@@ -78,6 +156,24 @@ export const URLParent = styled.div`
 export const URLForm = styled.form`
   display: flex;
   margin-left: 70px;
+
+  @media (max-width: 320px) {
+    display: block;
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 578px) {
+    display: block;
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    margin-left: 0;
+    padding: 0 20px;
+  }
 `;
 
 export const URLInput = styled.input`
@@ -95,11 +191,54 @@ export const URLInput = styled.input`
     box-shadow: 0 0 10px 1px #48abe0;
     border: 1px solid transparent;
   }
+
+  @media (max-width: 320px) {
+    margin: 0 auto;
+    margin-right: 0px;
+    width: 250px;
+  }
+
+  @media (max-width: 578px) {
+    margin: 0 auto;
+    margin-right: 0px;
+    width: 250px;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    margin-right: 0px;
+  }
+
+  @media (max-width: 992px) {
+    margin: 0 auto;
+    margin-right: 0px;
+  }
 `;
 
 export const URLButton = styled.button`
   color: #fff;
   background-color: #1a1a1a;
+
+  @media (max-width: 320px) {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* @media (max-width: 578px) {
+    width: 100%;
+    margin-top: 20px;
+  } */
+
+  /* @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 20px;
+  } */
+
+  @media (max-width: 992px) {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+  }
 `;
 
 export const URLShortWrapper = styled.div`
@@ -123,6 +262,22 @@ export const URLCopyButton = styled.button`
 export const LinkParent = styled.div`
   margin-top: 250px;
   text-align: center;
+
+  @media (max-width: 320px) {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 578px) {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 992px) {
+    margin-top: 100px;
+  }
 `;
 
 export const Links = styled.a`
@@ -133,6 +288,11 @@ export const Links = styled.a`
 
   &:hover {
     background-color: #e8f0fe;
+  }
+
+  @media (max-width: 320px) {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 `;
 
@@ -146,7 +306,27 @@ export const HowTitle = styled.h2``;
 
 export const HowInner = styled.div``;
 
-export const HowList = styled.ul``;
+export const HowList = styled.ul`
+  @media (max-width: 320px) {
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (max-width: 576px) {
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (max-width: 992px) {
+    margin: 0;
+    padding: 0;
+  }
+`;
 
 export const HowItem = styled.li`
   margin-top: 40px;
@@ -159,4 +339,20 @@ export const HowDiv = styled.div``;
 export const HowPic = styled.img`
   border: 1px solid #333;
   margin-top: 40px;
+
+  @media (max-width: 320px) {
+    width: 100%;
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 992px) {
+    width: 100%;
+  }
 `;

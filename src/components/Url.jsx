@@ -3,6 +3,7 @@ import Logo from "../assets/images/logo.png";
 import Pic1 from "../assets/images/undraw_link_shortener_mvf6.svg";
 import PicWork from "../assets/images/Screenshot_2.png";
 import PicWork2 from "../assets/images/Screenshot_3.png";
+import PicWork3 from "../assets/images/img2.svg";
 import axios from "axios";
 import React, { useState } from "react";
 // Toastify
@@ -93,16 +94,13 @@ export const Url = () => {
             <HeaderItem>
               <HeaderLink href="#how">Usage</HeaderLink>
             </HeaderItem>
-            <HeaderItem>
-              <HeaderLink href="">Price</HeaderLink>
-            </HeaderItem>
           </HeaderList>
         </HeaderDiv>
       </Header>
 
       <Wrapper id="home">
         <WrapperImg>
-          <Img src={Pic1} width="500" alt="image-bg" />
+          <Img src={PicWork3} width="500" alt="image-bg" />
         </WrapperImg>
         <URLWrapper>
           <HeadTitle>Create Click-Worthy Links</HeadTitle>
@@ -115,7 +113,7 @@ export const Url = () => {
                 name="text"
                 placeholder="Paste The URL to be shortened"
               />
-              <URLButton type="submit">Shorten</URLButton>
+              <URLButton type="submit"> Shorten</URLButton>
             </URLForm>
           </URLParent>
           <URLShortWrapper>
