@@ -17,10 +17,17 @@ export const Header = styled.header`
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 `;
 
-export const HeaderLinkHome = styled.a``;
+export const HeaderLinkHome = styled.a`
+  display: flex;
+  align-items: center;
+`;
 
 export const HeaderImg = styled.img`
   cursor: pointer;
+`;
+
+export const HeaderLinkLog = styled.span`
+  margin-left: 10px;
 `;
 
 export const HeaderDiv = styled.div`

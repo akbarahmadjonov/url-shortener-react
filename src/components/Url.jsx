@@ -16,6 +16,7 @@ import {
   HeaderItem,
   HeaderLink,
   HeaderLinkHome,
+  HeaderLinkLog,
   HeaderList,
   HeadTitle,
   HowDiv,
@@ -91,6 +92,7 @@ export const Url = () => {
       <Header>
         <HeaderLinkHome href="">
           <HeaderImg src={Logo} alt="logo" width={70} />
+          <HeaderLinkLog>URL Shortener</HeaderLinkLog>
         </HeaderLinkHome>
         <HeaderDiv>
           <HeaderList>
