@@ -356,3 +356,59 @@ export const HowPic = styled.img`
     width: 100%;
   }
 `;
+
+export const SpDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
+  margin-top: 100px;
+  margin-left: 70px;
+  padding: 10px;
+  border: 1px solid #ff725e;
+  border-radius: 4px;
+
+  @media (max-width: 320px) {
+    width: 100%;
+    max-width: 280px;
+    margin-left: 0;
+    overflow: hidden;
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
+    max-width: 280px;
+    margin-left: 0;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 290px;
+    margin-left: 0;
+    margin: 0 auto;
+    margin-top: 40px;
+    overflow: hidden;
+  }
+`;
+
+export const SpSpan = styled.span`
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  justify-content: center;
+`;
+
+export const SpLink = styled.a`
+  margin-left: 7px;
+`;
+
+export const SpLinkW = styled.a`
+  margin-left: 7px;
+  background-color: #ff725e;
+  color: #fff;
+`;
+
+export const SpImg = styled.img``;
+
+export const SpParagraph = styled.p``;

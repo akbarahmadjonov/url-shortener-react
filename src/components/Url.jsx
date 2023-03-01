@@ -1,9 +1,9 @@
 import { IoMdCopy } from "react-icons/io";
 import Logo from "../assets/images/logo.png";
-import Pic1 from "../assets/images/undraw_link_shortener_mvf6.svg";
 import PicWork from "../assets/images/Screenshot_2.png";
 import PicWork2 from "../assets/images/Screenshot_3.png";
 import PicWork3 from "../assets/images/img2.svg";
+import DoubleCheckIcon from "../assets/images/check-double-solid.svg";
 import axios from "axios";
 import React, { useState } from "react";
 // Toastify
@@ -29,6 +29,12 @@ import {
   Img,
   LinkParent,
   Links,
+  SpDiv,
+  SpImg,
+  SpLink,
+  SpLinkW,
+  SpParagraph,
+  SpSpan,
   URLButton,
   URLCopyButton,
   URLForm,
@@ -135,7 +141,25 @@ export const Url = () => {
               ""
             )}
           </URLShortWrapper>
-
+          <SpDiv>
+            <SpSpan>
+              {" "}
+              <SpImg src={DoubleCheckIcon} width="40" alt="Double icon" /> By
+              using our service you will get:
+            </SpSpan>
+            <SpParagraph>
+              Before:
+              <SpLink href="https://www.youtube.com/watch?v=_lleMDkiB9w&list=PLXJSt32YUa4VH5bEPhu5SM2I_VudO6Zgz">
+                https://www.youtube.com/watch?v=_lleMDkiB9w&list=PLXJSt32YUa4VH5bEPhu5SM2I_VudO6Zgz
+              </SpLink>
+            </SpParagraph>
+            <SpParagraph>
+              After:{" "}
+              <SpLinkW href="https://bit.ly/3Y7f5Rh">
+                https://bit.ly/3Y7f5Rh
+              </SpLinkW>
+            </SpParagraph>
+          </SpDiv>
           <LinkParent>
             <Links target="_blank" href="https://github.com/akbarahmadjonov">
               GitHub
@@ -154,7 +178,6 @@ export const Url = () => {
               Telegram
             </Links>
           </LinkParent>
-
           {/* How it works */}
           <HowWrap id="how">
             <HowTitle>How it Works</HowTitle>
