@@ -1,9 +1,60 @@
 import styled from "styled-components";
 
+export const Header = styled.header`
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+  margin-bottom: 100px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+`;
+
+export const HeaderLinkHome = styled.a``;
+
+export const HeaderImg = styled.img`
+  cursor: pointer;
+`;
+
+export const HeaderDiv = styled.div`
+  margin-left: auto;
+`;
+
+export const HeaderList = styled.ul`
+  display: flex;
+`;
+
+export const HeaderItem = styled.li`
+  list-style: none;
+`;
+
+export const HeaderLink = styled.a`
+  /* Margin, paddings */
+  margin-right: 50px;
+  padding: 7px;
+  color: #333;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: #e8f0fe;
+  }
+`;
+
+// Header
+
 export const Wrapper = styled.div`
   display: flex;
-  /* align-items: center; */
   justify-content: center;
+
+  /* Margin, paddings */
+  margin-top: 180px;
 `;
 
 export const WrapperImg = styled.div`

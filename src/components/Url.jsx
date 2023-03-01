@@ -1,13 +1,21 @@
 import { IoMdCopy } from "react-icons/io";
+import Logo from "../assets/images/logo.png";
 import Pic1 from "../assets/images/undraw_link_shortener_mvf6.svg";
 import PicWork from "../assets/images/Screenshot_2.png";
 import PicWork2 from "../assets/images/Screenshot_3.png";
 import axios from "axios";
-import { useState } from "react";
+import React, { useState } from "react";
 // Toastify
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
+  Header,
+  HeaderDiv,
+  HeaderImg,
+  HeaderItem,
+  HeaderLink,
+  HeaderLinkHome,
+  HeaderList,
   HeadTitle,
   HowDiv,
   HowInner,
@@ -71,98 +79,120 @@ export const Url = () => {
       });
   };
   return (
-    <Wrapper>
-      <WrapperImg>
-        <Img src={Pic1} width="500" alt="image-bg" />
-      </WrapperImg>
-      <URLWrapper>
-        <HeadTitle>Create Click-Worthy Links</HeadTitle>
-        <URLParent>
-          <URLForm onSubmit={(e) => handleSubmit(e)}>
-            <URLInput
-              onChange={(e) => setLongURL(e.target.value)}
-              type="text"
-              value={longURL}
-              name="text"
-              placeholder="Paste The URL to be shortened"
-            />
-            <URLButton type="submit">Shorten</URLButton>
-          </URLForm>
-        </URLParent>
-        <URLShortWrapper>
-          {result ? (
-            <>
-              <URLShort>
-                {shortURL}{" "}
-                <URLCopyButton
-                  onClick={() => {
-                    navigator.clipboard.writeText(shortURL);
-                  }}
-                >
-                  <IoMdCopy />
-                  Copy
-                </URLCopyButton>{" "}
-              </URLShort>
-            </>
-          ) : (
-            ""
-          )}
-        </URLShortWrapper>
+    <React.Fragment>
+      {/* Header  */}
+      <Header>
+        <HeaderLinkHome href="">
+          <HeaderImg src={Logo} alt="logo" width={70} />
+        </HeaderLinkHome>
+        <HeaderDiv>
+          <HeaderList>
+            <HeaderItem>
+              <HeaderLink href="#home">Home</HeaderLink>
+            </HeaderItem>
+            <HeaderItem>
+              <HeaderLink href="#how">Usage</HeaderLink>
+            </HeaderItem>
+            <HeaderItem>
+              <HeaderLink href="">Price</HeaderLink>
+            </HeaderItem>
+          </HeaderList>
+        </HeaderDiv>
+      </Header>
 
-        <LinkParent>
-          <Links target="_blank" href="https://github.com/akbarahmadjonov">
-            GitHub
-          </Links>
-          <Links
-            target="_blank"
-            href="https://www.linkedin.com/in/akbar-ahmadjonov-18371024a/"
-          >
-            LinkedIn
-          </Links>
-          <Links
-            target="_blank
+      <Wrapper id="home">
+        <WrapperImg>
+          <Img src={Pic1} width="500" alt="image-bg" />
+        </WrapperImg>
+        <URLWrapper>
+          <HeadTitle>Create Click-Worthy Links</HeadTitle>
+          <URLParent>
+            <URLForm onSubmit={(e) => handleSubmit(e)}>
+              <URLInput
+                onChange={(e) => setLongURL(e.target.value)}
+                type="text"
+                value={longURL}
+                name="text"
+                placeholder="Paste The URL to be shortened"
+              />
+              <URLButton type="submit">Shorten</URLButton>
+            </URLForm>
+          </URLParent>
+          <URLShortWrapper>
+            {result ? (
+              <>
+                <URLShort>
+                  {shortURL}{" "}
+                  <URLCopyButton
+                    onClick={() => {
+                      navigator.clipboard.writeText(shortURL);
+                    }}
+                  >
+                    <IoMdCopy />
+                    Copy
+                  </URLCopyButton>{" "}
+                </URLShort>
+              </>
+            ) : (
+              ""
+            )}
+          </URLShortWrapper>
+
+          <LinkParent>
+            <Links target="_blank" href="https://github.com/akbarahmadjonov">
+              GitHub
+            </Links>
+            <Links
+              target="_blank"
+              href="https://www.linkedin.com/in/akbar-ahmadjonov-18371024a/"
+            >
+              LinkedIn
+            </Links>
+            <Links
+              target="_blank
           "
-            href="https://t.me/akbarahmadjonovv"
-          >
-            Telegram
-          </Links>
-        </LinkParent>
+              href="https://t.me/akbarahmadjonovv"
+            >
+              Telegram
+            </Links>
+          </LinkParent>
 
-        {/* How it works */}
-        <HowWrap>
-          <HowTitle>How it Works</HowTitle>
-          <HowInner>
-            <HowList>
-              <HowItem>
-                <HowSpan>
-                  Copy your desired URL, and paste it in the inputfield
-                </HowSpan>
-                <HowDiv>
-                  <HowPic
-                    src="https://www.dignited.com/wp-content/uploads/2019/02/shorten-long-url.jpg"
-                    width="500"
-                    alt="link"
-                  />
-                </HowDiv>
-              </HowItem>
-              <HowItem>
-                <HowSpan>Paste the URL to be shortened</HowSpan>
-                <HowDiv>
-                  <HowPic src={PicWork} width="500" alt="link" />
-                </HowDiv>
-              </HowItem>
-              <HowItem>
-                <HowSpan>
-                  Get the URL shortened Fully and enjoy your short URL
-                </HowSpan>
-                <HowDiv>
-                  <HowPic src={PicWork2} width="500" alt="link" />
-                </HowDiv>
-              </HowItem>
-            </HowList>
-          </HowInner>
-        </HowWrap>
-      </URLWrapper>
-    </Wrapper>
+          {/* How it works */}
+          <HowWrap id="how">
+            <HowTitle>How it Works</HowTitle>
+            <HowInner>
+              <HowList>
+                <HowItem>
+                  <HowSpan>
+                    Copy your desired URL, and paste it in the inputfield
+                  </HowSpan>
+                  <HowDiv>
+                    <HowPic
+                      src="https://www.dignited.com/wp-content/uploads/2019/02/shorten-long-url.jpg"
+                      width="500"
+                      alt="link"
+                    />
+                  </HowDiv>
+                </HowItem>
+                <HowItem>
+                  <HowSpan>Paste the URL to be shortened</HowSpan>
+                  <HowDiv>
+                    <HowPic src={PicWork} width="500" alt="link" />
+                  </HowDiv>
+                </HowItem>
+                <HowItem>
+                  <HowSpan>
+                    Get the URL shortened Fully and enjoy your short URL
+                  </HowSpan>
+                  <HowDiv>
+                    <HowPic src={PicWork2} width="500" alt="link" />
+                  </HowDiv>
+                </HowItem>
+              </HowList>
+            </HowInner>
+          </HowWrap>
+        </URLWrapper>
+      </Wrapper>
+    </React.Fragment>
   );
 };
