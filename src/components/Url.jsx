@@ -52,9 +52,15 @@ export const Url = () => {
   const [longURL, setLongURL] = useState("");
   const [shortURL, setshortURL] = useState("");
   const [result, setResult] = useState(false);
+  const [copy, setCopy] = useState("Copy");
 
   //   Your token ...
   const MY_TOKEN = "ff7663202f1fa4eae2e52561a83a25a044fead4c";
+
+  // Changes the value of the button to the (Copied)
+  const changeCopy = () => {
+    setCopy("Copied");
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -131,11 +137,14 @@ export const Url = () => {
                   {shortURL}{" "}
                   <URLCopyButton
                     onClick={() => {
-                      navigator.clipboard.writeText(shortURL);
+                      {
+                        changeCopy(() => changeVal());
+                        navigator.clipboard.writeText(shortURL);
+                      }
                     }}
                   >
                     <IoMdCopy />
-                    Copy
+                    {copy}
                   </URLCopyButton>{" "}
                 </URLShort>
               </>
